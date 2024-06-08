@@ -2,11 +2,9 @@ import os
 from pathlib import Path
 import logging
 
-logging.basicConfig(level=logging.INFO)
+project_name = "mlproject"
 
-project_name="mlproject"
-
-list_of_files = [
+list_of_file=[
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/components/__init__.py",
     f"src/{project_name}/components/data_ingestion.py",
@@ -22,11 +20,10 @@ list_of_files = [
     "app.py",
     "Dockerfile",
     "requirements.txt",
-    "setup.py"   
+    "setup.py" 
 ]
 
-
-for filepath in list_of_files:
+for filepath in list_of_file:
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
 
